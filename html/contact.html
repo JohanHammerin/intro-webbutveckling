@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <section>
+        <h2>Kontakt</h2>
+        <nav>
+          <ul>
+            <a href="index.html">Hem</a>
+            <a href="products.html">Produkter</a>
+            <a href="">Kontakt</a>
+            <a href="about.html">Om oss!</a>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section class="contact-form">
+        <form action="">
+          <section>
+            <label for="namn">Namn</label>
+            <input type="text" id="namn" name="namn" />
+
+            <label for="epost">Epost</label>
+            <input type="text" id="epost" name="epost" />
+          </section>
+          <section>
+            <label for="ärende">Ärende</label>
+            <select name="ärende" id="ärende">
+              <option value="Fråga">Fråga</option>
+              <option value="Hyllning">Hyllning</option>
+              <option value="Klagomål">Klagomål</option>
+            </select>
+          </section>
+
+          <section>
+            <label for="ärende-text">Blöd ut ditt hjärta!</label>
+          </section>
+
+          <section>
+            <textarea name="ärende-text" id="ärende-text"></textarea>
+          </section>
+
+          <section>
+            <input
+              type="radio"
+              id="godkänn-villkor"
+              name="godkänn-villkor"
+              required
+            />
+            <label for="godkänn-villkor">Godkänn villkor för denna sida.</label>
+            
+          </section>
+          <section>
+            <input type="submit" id="submit" name="submit" />
+          </section>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <p>Tel: +46 70 000 00 00</p>
+        <p>Adress: Kungsgatan 1</p>
+        <p>epost: butik@kläder.se</p>
+      </ul>
+    </footer>
+  </body>
+</html>

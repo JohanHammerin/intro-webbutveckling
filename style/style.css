@@ -1,0 +1,166 @@
+html,
+body {
+  height: 100%; /* Gör så att body tar upp hela höjden på fönstret */
+  margin: 0; /* Ta bort margin från body */
+  padding: 0; /* Ta bort padding från body */
+  display: flex; /* Använd flexbox */
+  flex-direction: column;
+  background-color: #f5efe7;
+  font-family: Arial;
+}
+
+main {
+  flex: 1; /* Gör så att main tar upp all ledig höjd */
+}
+
+header {
+  color: white;
+}
+
+header h2 {
+  text-align: center;
+  background-color: #213555;
+  margin: 0;
+  padding: 0.7%;
+}
+
+nav {
+  background-color: #3e5879;
+  margin-bottom: 2%;
+}
+
+nav ul {
+  display: flex; /* Gör länkarna vågräta */
+  justify-content: center; /* Centrerar länkarna */
+  list-style: none; /* Tar bort punktlistor */
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none; /* Tar bort understrykning */
+  color: white; /* Gör texten vit */
+  padding: 1% 2%; /* Lägg till lite utrymme runt texten */
+}
+
+.tråd-img {
+  display: flex; /* Flex-container för bild och textinnehåll */
+  justify-content: space-evenly; /* Vertikal centrering av bild och text/knapp */
+  gap: 20px; /* Avstånd mellan bild och text/knapp */
+}
+
+.tråd-img img {
+  max-width: 50%; /* Bildens bredd */
+  height: auto; /* Automatisk höjd */
+  border-radius: 10px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column; /* Placera text och knapp i en kolumn */
+  justify-content: center; /* Centrerad vertikalt */
+}
+
+.tråd-btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #213555;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tråd-btn:hover {
+  background-color: #3e5879;
+}
+
+footer {
+  background-color: #685752;
+  width: 100%; /* Gör footern lika bred som sidan */
+  color: white;
+  margin-top: 10px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center; /* Centrerar innehållet */
+    flex-wrap: wrap; /* Tillåt innehållet att brytas på flera rader */
+    gap: 10%; /* Avstånd mellan elementen */
+    padding: 10px; /* Avstånd mellan kanten och innehållet */
+    margin: 0; /* Ta bort extra marginal */
+    list-style: none; /* Ta bort punktlista */
+  }
+  
+
+.products {
+  display: flex; /* Flex-container */
+  flex-wrap: wrap; /* Gör det möjligt att bryta till nästa rad om det inte får plats */
+  gap: 20px; /* Avstånd mellan produkterna */
+  justify-content: space-evenly; /* Jämnt fördelade produkter */
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column; /* Lägg innehåll i kolumner */
+  align-items: center; /* Centrerar bilden och texten horisontellt */
+  width: 200px; /* Sätt en fast bredd för konsekvent höjd */
+  text-align: center; /* Centrerar texten */
+}
+
+.product-item img {
+    width: 100%; /* Gör att bilden fyller containerbredden */
+    height: 200px; /* Ger en fast höjd */
+    object-fit: cover; /* Beskär bilden för att passa container utan att förvränga proportionerna */
+    border-radius: 10px; /* Rundade hörn */
+  }
+  
+
+.product-item h4 {
+  margin-top: 10px; /* Avstånd mellan bilden och texten */
+  font-size: 16px; /* Justera textstorleken */
+  color: #333; /* Färg på texten */
+}
+
+.product-item a {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #213555;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.product-item a:hover {
+  background-color: #3e5879;
+}
+
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form section {
+    margin-bottom: 10px;
+}
+
+.om-oss-bild {
+    display: flex;
+    justify-content: center;
+}
+
+.om-oss-bild img {
+        max-width: 50%; /* Bildens bredd */
+        height: auto; /* Automatisk höjd */
+        border-radius: 10px;
+}
