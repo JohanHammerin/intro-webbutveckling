@@ -3,8 +3,7 @@ body {
   height: 100%; /* Gör så att body tar upp hela höjden på fönstret */
   margin: 0; /* Ta bort margin från body */
   padding: 0; /* Ta bort padding från body */
-  display: flex; /* Använd flexbox */
-  flex-direction: column;
+
   background-color: #f5efe7;
   font-family: Arial;
 }
@@ -15,32 +14,36 @@ main {
 
 header {
   color: white;
+  background-color: #0047ab;
 }
 
 header h2 {
-  text-align: center;
-  background-color: #213555;
+  display: flex;
+  justify-content: center;
   margin: 0;
-  padding: 0.7%;
+  padding: 10px;
+  background-color: #003399;
 }
-
 nav {
-  background-color: #3e5879;
-  margin-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 nav ul {
-  display: flex; /* Gör länkarna vågräta */
-  justify-content: center; /* Centrerar länkarna */
-  list-style: none; /* Tar bort punktlistor */
-  padding: 0;
-  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
-nav a {
-  text-decoration: none; /* Tar bort understrykning */
-  color: white; /* Gör texten vit */
-  padding: 1% 2%; /* Lägg till lite utrymme runt texten */
+nav ul a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+nav ul a:hover {
+  text-decoration: underline;
 }
 
 .tråd-img {
@@ -86,15 +89,14 @@ footer {
 }
 
 footer ul {
-    display: flex;
-    justify-content: center; /* Centrerar innehållet */
-    flex-wrap: wrap; /* Tillåt innehållet att brytas på flera rader */
-    gap: 10%; /* Avstånd mellan elementen */
-    padding: 10px; /* Avstånd mellan kanten och innehållet */
-    margin: 0; /* Ta bort extra marginal */
-    list-style: none; /* Ta bort punktlista */
-  }
-  
+  display: flex;
+  justify-content: center; /* Centrerar innehållet */
+  flex-wrap: wrap; /* Tillåt innehållet att brytas på flera rader */
+  gap: 10%; /* Avstånd mellan elementen */
+  padding: 10px; /* Avstånd mellan kanten och innehållet */
+  margin: 0; /* Ta bort extra marginal */
+  list-style: none; /* Ta bort punktlista */
+}
 
 .products {
   display: flex; /* Flex-container */
@@ -114,12 +116,11 @@ footer ul {
 }
 
 .product-item img {
-    width: 100%; /* Gör att bilden fyller containerbredden */
-    height: 200px; /* Ger en fast höjd */
-    object-fit: cover; /* Beskär bilden för att passa container utan att förvränga proportionerna */
-    border-radius: 10px; /* Rundade hörn */
-  }
-  
+  width: 100%; /* Gör att bilden fyller containerbredden */
+  height: 200px; /* Ger en fast höjd */
+  object-fit: cover; /* Beskär bilden för att passa container utan att förvränga proportionerna */
+  border-radius: 10px; /* Rundade hörn */
+}
 
 .product-item h4 {
   margin-top: 10px; /* Avstånd mellan bilden och texten */
@@ -127,10 +128,10 @@ footer ul {
   color: #333; /* Färg på texten */
 }
 
-.product-item a {
+.product-item button {
   display: flex;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 10px;
   background-color: #213555;
   color: white;
   text-decoration: none;
@@ -144,23 +145,23 @@ footer ul {
   background-color: #3e5879;
 }
 
-
 .contact-form {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-form section {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .om-oss-bild {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .om-oss-bild img {
-        max-width: 50%; /* Bildens bredd */
-        height: auto; /* Automatisk höjd */
-        border-radius: 10px;
+  max-width: 50%; /* Bildens bredd */
+  height: auto; /* Automatisk höjd */
+  border-radius: 10px;
 }
