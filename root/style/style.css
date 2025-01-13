@@ -3,9 +3,10 @@ body {
   height: 100%; /* Gör så att body tar upp hela höjden på fönstret */
   margin: 0; /* Ta bort margin från body */
   padding: 0; /* Ta bort padding från body */
-
   background-color: #f5efe7;
   font-family: Arial;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -15,6 +16,28 @@ main {
 header {
   color: white;
   background-color: #0047ab;
+  margin-bottom: 20px;
+
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #003399;
+  padding: 5px;
+
+}
+
+.title button {
+  padding: 10px 20px;
+  background-color: #213555;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 header h2 {
@@ -22,12 +45,10 @@ header h2 {
   justify-content: center;
   margin: 0;
   padding: 10px;
-  background-color: #003399;
 }
 nav {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 nav ul {
@@ -164,4 +185,18 @@ footer ul {
   max-width: 50%; /* Bildens bredd */
   height: auto; /* Automatisk höjd */
   border-radius: 10px;
+}
+
+.color-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: flex;
 }

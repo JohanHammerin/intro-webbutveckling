@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
-    <link rel="stylesheet" href="/style/style.css" />
+    <title>Produkter</title>
+    <link rel="stylesheet" href="/root/style/style.css" />
   </head>
   <body>
     <header>
       <section>
-        <h2>Produkter</h2>
+        <div class="title">
+          <button id="nav-btn">|||</button>
+          <h2>Produkter</h2>
+        </div>
         <nav>
-          <ul>
+          <ul id="nav-bar-ul">
             <a href="index.html">Hem</a>
             <a href="">Produkter</a>
             <a href="contact.html">Kontakt</a>
-            <a href="about.html">Om oss!</a>
+            <a href="about.html">Om oss</a>
             <a href="cart.html">Kundvagn</a>
-
           </ul>
         </nav>
       </section>
@@ -25,39 +27,53 @@
 
     <main>
       <section class="products">
-        <div class="product-item">
-          <img src="/img/rosa-blomma.jpg" alt="Rosa blomma" />
+        <!-- Använd <article> för varje produkt -->
+        <article class="product-item">
+          <img src="/root/img/rosa-blomma.jpg" alt="Rosa blomma" />
           <h4>Köp den här rosa blomman!</h4>
-          <button id="rosa-blomma-btn">Köp!</button>
-        </div>
-        <div class="product-item">
-          <img src="/img/gul-blomma.jpg" alt="Gul blomma" />
+          <button class="add-to-cart-btn" data-product="Rosa blomma">
+            100:-
+          </button>
+        </article>
+        <article class="product-item">
+          <img src="/root/img/gul-blomma.jpg" alt="Gul blomma" />
           <h4>Köp den här gula blomman!</h4>
-          <button id="gul-blomma-btn">Köp!</button>
-        </div>
-        <div class="product-item">
-          <img src="/img/blå-blomma.jpg" alt="Blå blomma" />
+          <button class="add-to-cart-btn" data-product="Gul blomma">
+            100:-
+          </button>
+        </article>
+        <article class="product-item">
+          <img src="/root/img/blå-blomma.jpg" alt="Blå blomma" />
           <h4>Köp den här blå blomman!</h4>
-          <button id="blå-blomma-btn">Köp!</button>
-        </div>
+          <button class="add-to-cart-btn" data-product="Blå blomma">
+            100:-
+          </button>
+        </article>
       </section>
 
       <section class="products">
-        <div class="product-item">
-          <img src="/img/röd-blomma.jpg" alt="Rosa blomma" />
+        <article class="product-item">
+          <img src="/root/img/röd-blomma.jpg" alt="Röd blomma" />
           <h4>Köp den här röda blomman!</h4>
-          <button id="röd-blomma-btn">Köp!</button>
-        </div>
-        <div class="product-item">
-          <img src="/img/orange-blomma.jpg" alt="Gul blomma" />
+          <button class="add-to-cart-btn" data-product="Röd blomma">
+            100:-
+          </button>
+        </article>
+        <article class="product-item">
+          <img src="/root/img/orange-blomma.jpg" alt="Orange blomma" />
           <h4>Köp de här oranga blommorna!</h4>
-          <button id="orange-blomma-btn">Köp!</button>
-        </div>
-        <div class="product-item">
-          <img src="/img/vit-blomma.jpg" alt="Blå blomma" />
+
+          <button class="add-to-cart-btn" data-product="Orange blomma">
+            100:-
+          </button>
+        </article>
+        <article class="product-item">
+          <img src="/root/img/vit-blomma.jpg" alt="Vit blomma" />
           <h4>Köp den här vita blomman!</h4>
-          <button id="vit-blomma-btn">Köp!</button>
-        </div>
+          <button class="add-to-cart-btn" data-product="Vit blomma">
+            100:-
+          </button>
+        </article>
       </section>
     </main>
 
@@ -68,7 +84,7 @@
         <p>epost: butik@kläder.se</p>
       </ul>
     </footer>
-    <script src="/js/app.js"></script>
 
+    <script src="/root/js/app.js"></script>
   </body>
 </html>
