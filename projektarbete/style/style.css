@@ -1,97 +1,236 @@
+/* Grundläggande reset och styling */
 html,
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth; /* Gör att scrollningen blir mjuk */
   font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+.hamburger {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
 
 header {
-  top: 0;
   width: 100%;
   color: rgb(0, 0, 0);
   background-color: white;
   padding: 10px 0;
 }
 
-.head-header {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .head-header img {
   width: 7rem;
   height: 7rem;
 }
+
 header hr {
-  width: 97%; /* Gör linjen 90% av förälderelementets bredd */
-  margin: 0 auto; /* Centrerar linjen horisontellt */
-  border: 1px solid #333; /* Exempel på en linje */
+  width: 97%;
+  margin: 0 auto;
+  border: 1px solid #333;
 }
 
 .head-navbar {
-  display: flex; /* Gör den till en flex-behållare */
-  justify-content: space-between; /* Placera innehåll på båda sidor */
-  align-items: center; /* Justera vertikalt */
-  margin: 10px 20px; /* Lägg till mellanrum från kanterna */
-}
-
-.navbar-buttons,
-.navbar-links {
-  display: flex; /* Gör barn till flex-element */
-  list-style: none; /* Ta bort standardpunktlistan */
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-buttons li,
-.navbar-links li {
-  margin: 0 15px; /* Mellanrum mellan knappar */
-}
-
-header nav ul {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.navbar-buttons {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-header nav ul li {
-  margin: 0 15px;
+.navbar-buttons a {
+  color: black;
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: rgb(123, 121, 121);
-  font-size: 18px;
-}
+@media (max-width: 768px) {
+  .navbar-buttons {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-header nav ul li a:hover {
-  color: black; /* Exempel på hover-effekt */
-  text-decoration: underline;
+  .navbar-buttons.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 20px;
+  }
 }
 
 section {
   padding: 100px 20px;
-  height: 100vh; /* Varje sektion tar hela höjden av skärmen */
+  height: auto; /* Använd inte full höjd här för att undvika överlappning */
 }
 
+#start h1,
+#start p {
+  text-align: center;
+}
+
+/* Omstrukturering för responsive about-sektion */
 #about {
   background-color: #000000;
+  color: white;
+  background-image: url(/img/blue.png);
 }
 
+.about-img-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+#about img {
+  width: 100%; /* Gör bilden responsiv */
+  height: auto;
+  max-width: 50%; /* För att hålla bildstorleken anpassad */
+  border-radius: 10px;
+}
+
+#about p {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+#filter {
+  margin-bottom: 30px;
+}
+
+/* Förbättrad layout för projekten */
 #projects {
-  background-color: #d3d3d3;
+  background-color: #f8f8f8;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#projects h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Ändrad bildstorlek för att göra alla bilder lika stora */
+.project img {
+  width: 100%;         /* Gör att bilden fyller hela bredden av föräldern */
+  height: 200px;       /* Sätt en fast höjd för att göra alla bilder lika stora */
+  object-fit: cover;   /* Gör så att bilderna täcker hela ytan utan att förvrängas */
+  object-position: center; /* Centrerar bilden om den behöver beskäras */
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.project p {
+  font-size: 1rem;
+  padding: 0 10px 10px;
+  color: #555;
 }
 
 #contact {
   background-color: #b3b3b3;
+  padding: 50px 20px;
+  clear: both;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   background-color: #333;
   color: white;
+  text-align: center;
 }
+
+/* Media Queries för mindre enheter */
+@media (max-width: 768px) {
+  .about-img-text {
+    flex-direction: column; /* Stapla bilden och texten på små skärmar */
+    text-align: center; /* Centrerar texten för små skärmar */
+  }
+
+  #about img {
+    max-width: 80%; /* Anpassa bildstorlek på små skärmar */
+  }
+
+  #projects {
+    padding: 50px 10px;
+  }
+
+  .project {
+    max-width: 90%; /* Gör projekten responsiva */
+  }
+
+  .navbar-buttons {
+    display: none; /* Döljer menyn på små skärmar */
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-buttons.open {
+    display: flex; /* Gör menyn synlig när den är öppen */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 20px;
+  }
+}
+
