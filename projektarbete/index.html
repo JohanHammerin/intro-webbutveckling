@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <article class="head-header">
+          <a href="index.html"><img src="/img/logo.png" alt="Logga" /></a>
+        </article>
+        <hr />
+        <article class="head-navbar">
+          <div class="hamburger">☰</div>
+          <!-- Hamburgermenyn -->
+          <ul class="navbar-buttons">
+            <a href="#start">Start</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#CV">CV</a>
+            <a href="#contact">Contact</a>
+          </ul>
+        </article>
+        <!-- Stänger head-navbar här -->
+      </nav>
+      <!-- Stänger nav här -->
+    </header>
+
+    <main role="main">
+      <section id="start">
+        <h1>Välkommen till min sida!</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A laudantium
+          pariatur adipisci inventore dolorum nisi nesciunt ex ipsa autem.
+          Facilis ipsam dolor modi, quisquam voluptates ea earum ratione
+          exercitationem blanditiis.
+        </p>
+      </section>
+      <section id="about">
+        <h1>About me</h1>
+        <article class="about-img-text">
+          <img src="/img/om-oss-bild (kopia).jpg" alt="Bild på mig" />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </article>
+      </section>
+      <section id="projects">
+        <h1>Projects</h1>
+        <label for="filter">Filter by keyword:</label>
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="Fullstack">Fullstack</option>
+          <option value="Backend">Backend</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Game">Games</option>
+        </select>
+        <div id="project-list">
+          <!--Adventure game-->
+          <article class="project" data-keywords="Game">
+            <a
+              href="https://github.com/JohanHammerin/Javaprogrammering-B/tree/master/src/main/java/se/johan_hammerin/adventureGame"
+            >
+              <img src="/img/adventure-game.jpg" alt="Java Game" />
+            </a>
+            <div>
+              <h1>Adventure game</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In eum
+                consequuntur cupiditate alias ut recusandae aperiam. Aut
+                laboriosam vero placeat magnam autem enim, ipsam saepe inventore
+                rerum harum deserunt reiciendis?
+              </p>
+            </div>
+          </article>
+          <!--Worker manager-->
+          <article class="project" data-keywords="Fullstack">
+            <a
+              href="https://github.com/JohanHammerin/Databashantering/tree/master/src/main/java/se/johan/projektarbete"
+            >
+              <img src="/img/work-manager2.png" alt="Web Project" />
+            </a>
+            <div>
+              <h1>Work manager</h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+                quod excepturi maxime illum nulla in unde sequi, illo commodi
+                natus veniam temporibus! Doloremque alias nam, eaque deleniti
+                tempora ipsum dolores.
+              </p>
+            </div>
+          </article>
+          <!--Dice game-->
+          <article class="project" data-keywords="Game">
+            <a
+              href="https://github.com/JohanHammerin/Javaprogrammering-A/tree/master/javaprogrammering-A/src/main/java/se/johan_hammerin/t%C3%A4rningsspelet"
+            >
+              <img src="/img/dice-game.png" alt="Dice Game" />
+            </a>
+            <div>
+              <h1>Dice game</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+                nam praesentium deleniti dolor, officiis illo voluptatem
+                dignissimos omnis corporis aliquid blanditiis nobis repellat
+                dolore! Quis minima adipisci magni optio quibusdam?
+              </p>
+            </div>
+          </article>
+
+          <article class="project" data-keywords="Backend">
+            <a
+              href="https://github.com/JohanHammerin/Databashantering/tree/master/src/main/java/se/johan/mongodb"
+            >
+              <img src="/img/movie-manager2.png" alt="Dice Game" />
+            </a>
+            <div>
+              <h1>Movie manager</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+                nam praesentium deleniti dolor, officiis illo voluptatem
+                dignissimos omnis corporis aliquid blanditiis nobis repellat
+                dolore! Quis minima adipisci magni optio quibusdam?
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h1>Contact</h1>
+
+        <article class="contact-info">
+          <p>Tel: <a href="tel:+46706497548">+46 70 649 75 48</a></p>
+          <p>
+            Mail:
+            <a href="mailto:johan04hammerin@gmail.com"
+              >johan04hammerin@gmail.com</a
+            >
+          </p>
+        </article>
+
+        <article class="contact-form">
+          <form action="">
+            <label for="textarea-msg">Meddelande</label>
+            <textarea name="textarea-msg" id="textarea-msg"></textarea>
+            <input type="submit" />
+          </form>
+        </article>
+      </section>
+
+      <!--CV section-->
+      <section id="CV">
+        <ul>
+          <h1>Jobbpositioner</h1>
+          <li>
+            <h3>Butiksbiträde</h3>
+            <p>
+              Under min tid som butiksbiträde på Stockholms Stadsmission, en
+              välgörenhetssecondhandaffär, fick jag värdefulla erfarenheter. Att
+              arbeta i en organisation som fokuserar på att hjälpa hemlösa gav
+              mig en unik inblick i socialt ansvarstagande. Mitt arbete innebar
+              att möta och kommunicera med nya människor varje dag, vilket
+              stärkte min förmåga att anpassa mig till olika situationer och
+              förbättrade min kommunikationskompetens. Dessutom lärde jag mig
+              att hantera stress i en dynamisk arbetsmiljö. Sammantaget var min
+              tid på Stockholms Stadsmission en berikande erfarenhet som
+              utvecklade både min personliga och professionella kompetens.
+            </p>
+          </li>
+          <li>
+            <h3>Scanreco</h3>
+            <p>
+              Under min tid som Assisterande komponentingenjör/Inköpsassistent
+              på företaget för radiostyrning av lastbilskranar, var en betydande
+              del av min professionella utveckling att lära mig ta ansvar och
+              agera med noggrannhet. Mitt arbete krävde att jag noggrant
+              kontrollerade tillverkarna för att säkerställa att de uppfyllde
+              alla tekniska miljökrav och att jag fyllde i inköpslistor korrekt.
+              Denna erfarenhet lärde mig vikten av att vara ansvarsfull i
+              arbetsuppgifter och att vara noggrann i varje detalj av
+              inköpsprocessen för att säkerställa högsta kvalitet och
+              effektivitet i produktionen.
+            </p>
+          </li>
+        </ul>
+
+        <ul>
+          <h1>Utbildning</h1>
+          <li>
+            <h3>Stridsvagnsmekaniker (Värnplikt)</h3>
+            <p>
+              Under lumpen på Gotland/Lund som stridsvagnsmekaniker lärde jag
+              mig viktiga färdigheter som stresshantering och punktlighet.
+              Erfarenheten visade att jag kunde ge mer än jag trodde, särskilt
+              under påfrestande förhållanden utan tillräcklig sömn eller mat.
+              Utbildningen gav omfattande kunskaper inom mekanik och teknik samt
+              betonade vikten av mitt arbete i det kritiska läget vi befann oss
+              i. Sammanfattningsvis var perioden en prövning av min fysiska och
+              psykiska kapacitet, där jag även insåg betydelsen av ansvar och
+              precision inom försvarsområdet.
+            </p>
+          </li>
+
+          <li>
+            <h3>Gymnasieutbildning</h3>
+            <p>
+              Under denna utbildning fick jag möjligheten att fördjupa mig i
+              flera programmeringsspråk och ramverk, vilket befäste min förmåga
+              att skapa dynamiska och responsiva webbplatser, samt utveckla
+              program som dagens industrier har nytta av. Jag har även förvärvat
+              gedigen kunskap inom databasdesign och effektiv
+              SQL-queryhantering. Dessutom har jag erfarenhet av att arbeta med
+              Java och PHP, vilket ytterligare utökar min tekniska kompetens.
+              Utforskningen av området Internet of Things (IoT) med hjälp av
+              Arduino har breddat min tekniska repertoar. Den samlade
+              erfarenheten har inte bara stärkt min tekniska grund utan även
+              utvecklat mina analytiska färdigheter och positionerat mig väl för
+              fortsatta studier inom systemutveckling.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer role="contentinfo">
+      <p>Copyright 2025, Johan Hammerin</p>
+    </footer>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
