@@ -97,7 +97,7 @@ section {
 }
 
 #start {
-  background-image: url(img/blue.png);
+  background-image: url(./img/blue.png);
   color: white;
 }
 
